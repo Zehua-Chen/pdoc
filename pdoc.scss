@@ -1,0 +1,53 @@
+:root {
+  --background: white;
+  --color: black;
+
+  @media (prefers-color-scheme: dark) {
+    --background: #2d2d2d;
+    --color: white;
+  }
+}
+
+$background: var(--background);
+$color: var(--color);
+$content-width: 760px;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: $background;
+  color: $color;
+
+  font-family: ui-serif, serif;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 20px;
+
+  max-width: $content-width;
+}
+
+%h {
+  font-family: ui-monospace;
+}
+
+h1 {
+  @extend %h;
+
+  font-size: 2rem;
+}
+
+h2 {
+  @extend %h;
+
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
